@@ -1,8 +1,11 @@
 module.exports = {
     mode: 'jit',
-    purge: ['./src/**/*.jsx'],
+    purge: ['./src/**/*.jsx', 'index.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
+        container: {
+            center: true,
+        },
         extend: {
             fontSize: {
                 base: '18px',
