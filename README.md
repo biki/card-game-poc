@@ -1,5 +1,7 @@
 # Card game
 
+Demo: https://modest-turing-beec0b.netlify.app/
+
 ## Introduction
 
 A very small "card game" proof of concept, built with technologies I currently use in my daily frontend business.
