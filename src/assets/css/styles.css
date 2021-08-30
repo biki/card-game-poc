@@ -1,0 +1,58 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dosis/v19/HhyaU5sn9vOmLzloC_U.woff2)
+        format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+        U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/dosis/v19/HhyaU5sn9vOmLzloC_U.woff2)
+        format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+        U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    @apply flex min-h-screen flex-col;
+}
+
+body {
+    @apply bg-gray-800 rounded text-base text-white flex-1 flex flex-col font-dosis border-8 border-gray-600 overflow-x-hidden;
+}
+
+main {
+    @apply p-4 flex-1 flex flex-col;
+}
+
+h1 {
+    @apply text-4xl font-bold text-center mb-4;
+}
+
+h2 {
+    @apply text-3xl font-bold mb-4;
+}
+
+button {
+    @apply bg-pink-200 rounded relative text-black font-bold uppercase text-xl p-4 px-8 transition-all hover:bg-pink-300;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+button:active {
+    @apply translate-x-[2px] translate-y-[2px] transform-gpu;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+}
+button[disabled] {
+    @apply cursor-not-allowed;
+}
