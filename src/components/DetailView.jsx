@@ -45,12 +45,13 @@ export const DetailView = () => {
     }
 
     return (
-        <div className="p-4 border-black rounded shadow-md bg-white/10">
+        <section className="p-4 border-black rounded shadow-md bg-white/10">
             {selectedPlayer && (
-                <div className="flex flex-wrap flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:items-center sm:justify-between">
+                <div className="flex flex-col flex-wrap items-start space-y-4 sm:flex-row sm:space-y-0 sm:items-center sm:justify-between">
                     <div className="flex flex-col space-y-4 sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
                         <img
                             src={`https://avatars.dicebear.com/4.7/api/bottts/player-${selectedPlayer.id}.svg`}
+                            alt={`${selectedPlayer.name}'s Avatar`}
                             className="w-20 h-20"
                         />
                         <div>
@@ -77,6 +78,6 @@ export const DetailView = () => {
                     Please select an available player card
                 </strong>
             )}
-        </div>
+        </section>
     )
 }
