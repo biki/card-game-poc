@@ -1,5 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 
+import playersJsonData from './assets/data/players.json?url'
+
 import { DetailView } from './components/DetailView'
 import { Overview } from './components/Overview'
 import { sortMultipartName } from './utils/sort'
@@ -25,7 +27,7 @@ const Game = () => {
      */
     useEffect(() => {
         async function loadPlayerData() {
-            const response = await fetch('/src/assets/data/players.json', {
+            const response = await fetch(playersJsonData, {
                 headers: {
                     'Content-Type': 'application/json',
                     Accept: 'application/json',
